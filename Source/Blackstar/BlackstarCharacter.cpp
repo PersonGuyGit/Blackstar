@@ -51,13 +51,63 @@ ABlackstarCharacter::ABlackstarCharacter()
 
 void ABlackstarCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
 	// set up gameplay key bindings
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ABlackstarCharacter::MoveRight);
+	
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &ABlackstarCharacter::Interact);
 
+	// make a function in ABlackstarCharacter instead?
+
+	//PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &ACharacter::Crouch);
+	//PlayerInputComponent->BindAction("Crouch", IE_Released, this, &ACharacter::Crouch);
+
+
+
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ABlackstarCharacter::Sprint);
+
+	//PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &ABlackstarCharacter::Pause);
+
+	//PlayerInputComponent->BindAxis("Aim Up", this, &ABlackstarCharacter::AimUp);
+	//PlayerInputComponent->BindAxis("Aim Right", this, &ABlackstarCharacter::AimRight);
+
+
+
+	//set up gameplay bindings, relating to combat
+	//PlayerInputComponent->BindAction("Fire", this, &AWeapon::Fire);
+	//PlayerInputComponent->BindAction("Alt Fire", this, &AWeapon::AltFire);
+	//PlayerInputComponent->BindAction("Weapon Wheel", this, &AWeapon::WeaponWheel);
+	PlayerInputComponent->BindAction("Block", IE_Pressed, this, &ABlackstarCharacter::Block);
+
+
+
+	//set up gameplay bindings related to touch controls
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ABlackstarCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ABlackstarCharacter::TouchStopped);
+}
+
+void ABlackstarCharacter::Interact()
+{
+}
+
+void ABlackstarCharacter::Block()
+{
+}
+
+void ABlackstarCharacter::Sprint()
+{
+}
+
+void ABlackstarCharacter::AimUp()
+{
+}
+
+void ABlackstarCharacter::AimRight()
+{
+
 }
 
 void ABlackstarCharacter::MoveRight(float Value)

@@ -34,6 +34,23 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
 
+	void Interact();
+
+	void Block();
+	
+	void Sprint();
+
+	void AimUp();
+
+	void AimRight();
+
+	//void Pause() override;
+
+
+
+
+
+
 
 public:
 	ABlackstarCharacter();

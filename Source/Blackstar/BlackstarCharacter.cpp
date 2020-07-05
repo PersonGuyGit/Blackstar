@@ -77,10 +77,13 @@ void ABlackstarCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &ABlackstarCharacter::BeginCrouch);
 	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &ABlackstarCharacter::EndCrouch);
 
 =======
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 =======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 
@@ -95,6 +98,9 @@ void ABlackstarCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 
 	//set up gameplay bindings related to touch controls
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+=======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 =======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
@@ -102,6 +108,7 @@ void ABlackstarCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	PlayerInputComponent->BindTouch(IE_Released, this, &ABlackstarCharacter::TouchStopped);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 void ABlackstarCharacter::BeginCrouch()
@@ -113,6 +120,8 @@ void ABlackstarCharacter::EndCrouch()
 {
 	UnCrouch();
 =======
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 =======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 void ABlackstarCharacter::Interact()
@@ -135,6 +144,9 @@ void ABlackstarCharacter::AimRight()
 {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+=======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 =======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e

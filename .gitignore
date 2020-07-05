@@ -13,3 +13,7 @@ Saved
 *.xcodeproj
 *.xcworkspace
 Content/ChameleonDemo/ChameleonDemoHall_BuiltData.uasset
+Source/Blackstar/BlackstarCharacter.cpp
+Source/Blackstar/BlackstarCharacter.h
+Source/Blackstar/BlackstarCharacter.cpp
+Source/Blackstar/BlackstarCharacter.h

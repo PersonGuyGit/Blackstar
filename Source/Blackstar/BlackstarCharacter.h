@@ -44,10 +44,13 @@ protected:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	void BeginCrouch();
 
 	void EndCrouch();
 =======
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 =======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 	void Interact();
@@ -68,6 +71,9 @@ protected:
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+=======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 =======
 >>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e

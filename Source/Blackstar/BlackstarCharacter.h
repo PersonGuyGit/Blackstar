@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Components/AudioComponent.h"
 #include "BlackstarCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -21,6 +22,13 @@ class ABlackstarCharacter : public ACharacter
 
 protected:
 
+	UPROPERTY(EditDefaultsOnly, Category = "Death Components")
+	UAudioComponent* NearDeathSound;
+
+	//Generic class for the designer to use for near death events
+	UFUNCTION(BlueprintImplementableEvent, Category = "Death Components")
+	void WhenNearDeath();
+	
 	/** Called for side to side input */
 	void MoveRight(float Val);
 
@@ -34,6 +42,35 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+	void BeginCrouch();
+
+	void EndCrouch();
+=======
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+	void Interact();
+
+	void Block();
+	
+	void Sprint();
+
+	void AimUp();
+
+	void AimRight();
+
+	//void Pause() override;
+
+
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 
 public:
 	ABlackstarCharacter();

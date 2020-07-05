@@ -33,6 +33,7 @@ ABlackstarCharacter::ABlackstarCharacter()
 	SideViewCameraComponent->bUsePawnControlRotation = false; // We don't want the controller rotating the camera
 
 	// Configure character movement
+	// 6/19/2020 Added crouching to this block
 	GetCharacterMovement()->bOrientRotationToMovement = true; // Face in the direction we are moving..
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 720.0f, 0.0f); // ...at this rotation rate
 	GetCharacterMovement()->GravityScale = 2.f;
@@ -41,7 +42,7 @@ ABlackstarCharacter::ABlackstarCharacter()
 	GetCharacterMovement()->GroundFriction = 3.f;
 	GetCharacterMovement()->MaxWalkSpeed = 600.f;
 	GetCharacterMovement()->MaxFlySpeed = 600.f;
-
+	GetMovementComponent()->GetNavAgentPropertiesRef().bCanCrouch = true;
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 }
@@ -51,13 +52,92 @@ ABlackstarCharacter::ABlackstarCharacter()
 
 void ABlackstarCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
+	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
 	// set up gameplay key bindings
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ABlackstarCharacter::MoveRight);
+	
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &ABlackstarCharacter::Interact);
 
+	// make a function in ABlackstarCharacter instead?
+
+	//PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &ACharacter::Crouch);
+	//PlayerInputComponent->BindAction("Crouch", IE_Released, this, &ACharacter::Crouch);
+
+
+
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ABlackstarCharacter::Sprint);
+
+	//PlayerInputComponent->BindAction("Interact", IE_Pressed, this, &ABlackstarCharacter::Pause);
+
+	//PlayerInputComponent->BindAxis("Aim Up", this, &ABlackstarCharacter::AimUp);
+	//PlayerInputComponent->BindAxis("Aim Right", this, &ABlackstarCharacter::AimRight);
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &ABlackstarCharacter::BeginCrouch);
+	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &ABlackstarCharacter::EndCrouch);
+
+=======
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+
+
+	//set up gameplay bindings, relating to combat
+	//PlayerInputComponent->BindAction("Fire", this, &AWeapon::Fire);
+	//PlayerInputComponent->BindAction("Alt Fire", this, &AWeapon::AltFire);
+	//PlayerInputComponent->BindAction("Weapon Wheel", this, &AWeapon::WeaponWheel);
+	PlayerInputComponent->BindAction("Block", IE_Pressed, this, &ABlackstarCharacter::Block);
+
+
+
+	//set up gameplay bindings related to touch controls
+<<<<<<< HEAD
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ABlackstarCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ABlackstarCharacter::TouchStopped);
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+void ABlackstarCharacter::BeginCrouch()
+{
+	Crouch();
+}
+
+void ABlackstarCharacter::EndCrouch()
+{
+	UnCrouch();
+=======
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+void ABlackstarCharacter::Interact()
+{
+}
+
+void ABlackstarCharacter::Block()
+{
+}
+
+void ABlackstarCharacter::Sprint()
+{
+}
+
+void ABlackstarCharacter::AimUp()
+{
+}
+
+void ABlackstarCharacter::AimRight()
+{
+
+<<<<<<< HEAD
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+=======
+>>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 }
 
 void ABlackstarCharacter::MoveRight(float Value)

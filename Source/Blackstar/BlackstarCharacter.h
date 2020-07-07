@@ -42,17 +42,10 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	void BeginCrouch();
 
 	void EndCrouch();
-=======
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+
 	void Interact();
 
 	void Block();
@@ -63,20 +56,7 @@ protected:
 
 	void AimRight();
 
-	//void Pause() override;
-
-
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+	void Pause();
 
 public:
 	ABlackstarCharacter();

@@ -7,6 +7,10 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
+void ABlackstarCharacter::Pause()
+{
+}
+
 ABlackstarCharacter::ABlackstarCharacter()
 {
 	// Set size for collision capsule
@@ -75,17 +79,10 @@ void ABlackstarCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	//PlayerInputComponent->BindAxis("Aim Up", this, &ABlackstarCharacter::AimUp);
 	//PlayerInputComponent->BindAxis("Aim Right", this, &ABlackstarCharacter::AimRight);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &ABlackstarCharacter::BeginCrouch);
 	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &ABlackstarCharacter::EndCrouch);
 
-=======
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
 
 
 	//set up gameplay bindings, relating to combat
@@ -97,20 +94,12 @@ void ABlackstarCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 
 
 	//set up gameplay bindings related to touch controls
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+
 	PlayerInputComponent->BindTouch(IE_Pressed, this, &ABlackstarCharacter::TouchStarted);
 	PlayerInputComponent->BindTouch(IE_Released, this, &ABlackstarCharacter::TouchStopped);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 void ABlackstarCharacter::BeginCrouch()
 {
 	Crouch();
@@ -119,11 +108,7 @@ void ABlackstarCharacter::BeginCrouch()
 void ABlackstarCharacter::EndCrouch()
 {
 	UnCrouch();
-=======
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+}
 void ABlackstarCharacter::Interact()
 {
 }
@@ -143,13 +128,7 @@ void ABlackstarCharacter::AimUp()
 void ABlackstarCharacter::AimRight()
 {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
-=======
->>>>>>> 770440a6a238d63f357f0dcd9225409f63e3b40e
+
 }
 
 void ABlackstarCharacter::MoveRight(float Value)

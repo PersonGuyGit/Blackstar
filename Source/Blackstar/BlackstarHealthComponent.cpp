@@ -64,6 +64,8 @@ float UBlackstarHealthComponent::GetArmor() const
 	return Armor;
 }
 
+
+
 void UBlackstarHealthComponent::HealCharacter(float HealTotal)
 {
 	if (HealTotal <= 0 || Health <= 0)
